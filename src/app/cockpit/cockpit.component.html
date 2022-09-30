@@ -19,3 +19,16 @@
         (click)="onAddBlueprint(serverNameInput)">Add Server Blueprint</button>
     </div>
   </div>
+
+  <!-- Using -Local Reference- in Templates  -->
+  <!-- # #serverNameInput -->
+  <!-- you can hold referance to the whole html element with all its properties,  -->
+  <!-- you can access  #serverNameInput.value (in case of input) -->
+  <!-- using (click)="onAddServer(serverNameInput)" you pass it into the TS file of the componentyou can use it in there  -->
+  <!-- onAddServer(nameInput: HTMLInputElement) {
+    console.log(nameInput)
+    console.log(nameInput.value)
+   this.serverCreated.emit({
+    serverName: nameInput.value, 
+    serverContent: this.newServerContent});
+  } -->
