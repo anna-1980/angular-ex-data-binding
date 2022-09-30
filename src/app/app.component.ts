@@ -5,7 +5,7 @@ import { ColdObservable } from 'rxjs/internal/testing/ColdObservable';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'], 
-  encapsulation: ViewEncapsulation.None
+  // encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
 //----- you loop through this array generating new HTML elements, 
