@@ -8,8 +8,11 @@ import { ColdObservable } from 'rxjs/internal/testing/ColdObservable';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
+//----- you loop through this array generating new HTML elements, 
+//----- the data on input from cockpit.component.html get push() 
+//----- into the array by the (click)="onAddServer(serverNameInput)"-------//
   serverElements: any[] = [
-{type: 'server', name: 'testserver', content: 'Just a test! hard coded in app.component.ts'}
+{type: 'server', name: 'testserver', content: 'Just a test! hard coded in app.component.ts array of serverElements'}
   ];
 
 // -------- lecture 69 --------------//
