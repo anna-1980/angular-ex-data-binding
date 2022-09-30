@@ -2,9 +2,14 @@
 class="panel panel-default">
 <div class="panel-heading">{{ element.name }}</div>
 <div class="panel-body">
-  <p>
+  <!-- <p>
     <strong *ngIf="element.type === 'server'" style="color: red">{{ element.content }}</strong>
     <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em>
-  </p>
+  </p> -->
+
+  <!-- special directive, serves as a hook you can place in your parent component( see app.component.html)
+    to mark the place for Angular where is should place/ add to DOM any content 
+    it finds between opening and closing tags of the component   -->
+  <ng-content></ng-content>
 </div>
 </div>
