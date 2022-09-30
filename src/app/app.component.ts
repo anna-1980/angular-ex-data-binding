@@ -36,4 +36,14 @@ export class AppComponent {
     });
   }
 
+  onChangeFirst(){
+  // it would fail of array was empty at first index-0
+    this.serverElements[0].name = 'Changed'
+    console.log('dummy button clicked')
+  }
+
+  onDestroyFirst() {
+    this.serverElements.splice(0, 1);
+  }
+
 }
