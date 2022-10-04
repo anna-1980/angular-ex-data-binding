@@ -15,7 +15,7 @@ export class CockpitComponent implements OnInit {
   // remember to add in HTML (click)="onAddBlueprint(serverNameInput)
   
   // newServerContent = '';
-  // getting access to the local reference
+  // getting access to the local reference in html template
   @ViewChild('ServerContentInput', {static: true}) ServerContentInput: ElementRef;
 
   constructor() { }
