@@ -4,5 +4,23 @@
 }
 
 p{
-   color: rgb(221, 33, 221);
+   color: rgb(152, 6, 185);
+}
+
+.element{
+    background-color: rgba(61, 165, 229, 0.4);
+    border: 2px solid  rgba(110, 167, 203, 1);
+    margin: 0.8rem 0.2rem ;
+}
+
+.colored-div{
+    background-color: rgba(238, 255, 0, 0.7);
+    padding: 1rem;
+}
+
+/* for the game of odd and even  */
+
+.afterTen{
+    background-color: blue;
+    color: yellow;
 }

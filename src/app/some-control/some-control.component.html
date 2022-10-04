@@ -1,0 +1,33 @@
+<div class="container element">
+    <button 
+class="btn btn-primary"
+(click)="onStartGame()"
+>Start Game</button>
+
+<button 
+class="btn btn-warning"
+(click)="onGamePause()"
+>Pause Game</button>
+
+<div class="row colored-div">
+    <div class="col-xs-6">
+        <p>hard coded 777</p>
+    </div>
+    <div class="col-xs-6">
+        <p> live from game: 
+            <button 
+            class="btn btn-success" 
+            [ngClass]="{'btn-danger': lastNumber % 2 === 0}"
+            [innerText]="lastNumber"
+            ></button></p>
+    </div>
+</div>
+<div class="row colored-div ">
+    <div class="col-xs-6 " >
+        <button class="btn btn-success " disabled  >Odd Numbers </button> 
+    </div>
+    <div class="col-xs-6">  
+        <button class="btn btn-danger" disabled >Even Numbers</button> 
+    </div>
+</div>
+</div>

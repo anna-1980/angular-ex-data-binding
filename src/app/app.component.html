@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container element">
   <app-cockpit 
   (serverCreated)="onServerAdded($event)"
   (bpCreated)="onBlueprintAdded($event)"
@@ -11,24 +11,32 @@
       type="button" 
       class="btn btn-info"
       (click)="onChangeFirst()"
-      >Change First Element</button>
+      >Change First Element(in app-comp)</button>
 
       <button 
       type="button" 
       class="btn btn-danger"
       (click)="onDestroyFirst()"
-      >Destroy First Component</button>
+      >Destroy First Component (in app-comp)</button>
 
       <app-server-element 
       *ngFor="let serverElement of serverElements"
       [srvElement]="serverElement"
       [name]="serverElement.name"
       >
-        <p>
+        <p #contentParagraph>
           <strong *ngIf="serverElement.type === 'server'" style="color: red">{{ serverElement.content }}</strong>
           <em *ngIf="serverElement.type === 'blueprint'">{{ serverElement.content }}</em>
         </p>
       </app-server-element>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <!-- listening to an even emitted from some-control.component.ts and template, 
+      and upot this event firing method onIntervalFired() from app.component.ts -->
+      <app-some-control (aliasInternalFiredEvent)="onIntervalFired($event)"></app-some-control>
     </div>
   </div>
 </div>

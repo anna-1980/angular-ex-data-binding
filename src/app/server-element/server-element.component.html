@@ -1,9 +1,9 @@
 <div
-class="panel panel-default">
+class="panel panel-default element">
 <!-- <div class="panel-heading">{{ element.name }}</div> -->
 
-<!-- to test in ngOnChanges gets fired more than once:  -->
-<div class="panel-heading">{{ name }}</div>
+<!-- to test in ngOnChanges gets fired more than once, render <p> using local reference:  -->
+<div class="panel-heading" #heading>{{ name }}</div>
 
 <div class="panel-heading">{{ element.name }}</div>
 <div class="panel-body">
