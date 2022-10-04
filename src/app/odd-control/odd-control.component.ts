@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-odd-control',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./odd-control.component.css']
 })
 export class OddControlComponent implements OnInit {
+// value is passed in from outside 
+ @Input() passedToOddCopmFromAppComp: number;
 
   constructor() { }
 

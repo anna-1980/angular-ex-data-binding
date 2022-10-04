@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-even-control',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./even-control.component.css']
 })
 export class EvenControlComponent implements OnInit {
+
+  @Input() passedToOddCopmFromAppComp: number;
 
   constructor() { }
 

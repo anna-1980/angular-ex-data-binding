@@ -16,6 +16,10 @@ export class AppComponent {
 {type: 'server', name: 'testserver', content: 'Just a test! hard coded in app.component.ts array of serverElements'}
   ];
 
+//----from Game odd even solution Lecture 84-----//
+oddNumbers: number[] = []
+evenNumbers: number[] = []
+
 // -------- lecture 69 --------------//
 // catching event emitted from cockpit component 
   onServerAdded( serverData: {serverName: string, serverContent: string}) {
@@ -46,7 +50,14 @@ export class AppComponent {
     this.serverElements.splice(0, 1);
   }
 
-  onIntervalFired(firedNumber: number){
-    console.log(firedNumber)
+  onIntervalFired(passedToOddCopmFromAppComp: number){
+    console.log(passedToOddCopmFromAppComp)
+    // console.log(this.oddNumbers)
+    // console.log(this.evenNumbers)
+    if (passedToOddCopmFromAppComp % 2 === 0 ) {
+      this.evenNumbers.push(passedToOddCopmFromAppComp)
+    }else{
+      this.oddNumbers.push(passedToOddCopmFromAppComp)
+    }
   }
 }

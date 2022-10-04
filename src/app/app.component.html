@@ -39,6 +39,22 @@
       <app-some-control (aliasInternalFiredEvent)="onIntervalFired($event)"></app-some-control>
     </div>
   </div>
+  <hr>
+  <p>from course example</p>
+  <div class="row">
+    <div class="col-xs-6">
+      <app-odd-control
+      *ngFor="let oddNumber of oddNumbers"
+      [passedToOddCopmFromAppComp]="oddNumber"
+      ></app-odd-control>
+    </div>
+    <div class="col-xs-6">
+      <app-even-control
+      *ngFor="let evenNumber of evenNumbers"
+      [passedToOddCopmFromAppComp]="evenNumber"
+      ></app-even-control>
+    </div>
+  </div>
 </div>
 
 <!-- //lecture 69 -->
